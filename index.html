@@ -55,9 +55,18 @@
     </section>
     <div class="panel" data-color="black"></div>
     <div class="panel" data-color="white"></div>
-    <iframe width="100%" height="500" frameborder="0"
+    <!--Observable Notebook-->
+    <!-- <iframe width="100%" height="500" frameborder="0"
     src="https://observablehq.com/embed/@ana-peykova/year-and-place-of-birth@980?cell=*"></iframe>
-    <div class="panel" data-color="white"></div>
-    <div class="panel" data-color="white"></div>
+    <div class="panel" data-color="white"></div> -->
+
+    <div id="observablehq-7b8248cc" style="height: 510px; overflow-y: hidden; padding-left: 10vmin"></div>   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+    <script type="module">
+    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+    import define from "https://api.observablehq.com/@ana-peykova/year-and-place-of-birth@1003.js?v=3";
+    new Runtime().module(define, Inspector.into("#observablehq-7b8248cc"));
+    </script>
+        <div class="panel" data-color="white"></div>
 
 </html>
