@@ -4,7 +4,7 @@ $(window)
       $body = $("body"),
       $panel = $(".panel");
 
-    var scroll = $window.scrollTop() + $window.height() / 2;
+    var scroll = $window.scrollTop() + $window.height() / 3;
 
     $panel.each(function () {
       var $this = $(this);
