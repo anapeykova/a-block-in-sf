@@ -9,7 +9,7 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" type="text/css" href="./inspector.css">
+    <link rel="stylesheet" type="text/css" href="./inspector.css" />
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
@@ -60,13 +60,26 @@
     src="https://observablehq.com/embed/@ana-peykova/year-and-place-of-birth@980?cell=*"></iframe>
     <div class="panel" data-color="white"></div> -->
 
-    <div id="observablehq-7b8248cc" style="height: 510px; overflow-y: hidden; padding-left: 10vmin"></div>   
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+    <div
+      id="observablehq-37a93390"
+      style="height: 710px; overflow-y: hidden; padding-inline: 10vmin"
+    ></div>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css"
+    />
     <script type="module">
-    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-    import define from "https://api.observablehq.com/@ana-peykova/year-and-place-of-birth@1003.js?v=3";
-    new Runtime().module(define, Inspector.into("#observablehq-7b8248cc"));
+      import {
+        Runtime,
+        Inspector,
+      } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+      import define from "https://api.observablehq.com/@ana-peykova/year-and-place-of-birth@1004.js?v=3";
+      new Runtime().module(define, Inspector.into("#observablehq-37a93390"));
     </script>
-        <div class="panel" data-color="white"></div>
-
+    <p style="margin-left: 10vmin; margin-top: 5vmin"><button onclick="revealProcess()">Curious about the data processing?</button></p>
+    <div id="process" style="margin-inline: 10vmin; padding: 2vmin; border: solid black 2px; display: none;">
+      The process <br> 1. did this <br> 2. did that <br> 3. this this
+    </div>
+    <div class="panel" data-color="white"></div>
+  </body>
 </html>

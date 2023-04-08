@@ -46,6 +46,11 @@ body {
   /* outline: 10px solid hotpink; */
 }
 
+.process {
+  display: flex;
+  margin-left: 10vmin;
+}
+
 .color-white {
   background-color: #ffffff;
 }
