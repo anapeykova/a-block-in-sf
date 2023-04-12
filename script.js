@@ -23,12 +23,11 @@ $(window)
   })
   .scroll();
 
-function revealProcess() {
-  var x = document.getElementById("process");
+function revealProcess(elem) {
+  var x = document.getElementById(elem);
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {
     x.style.display = "none";
   }
 }
-

@@ -34,10 +34,10 @@
     </section>
 
     <!--2023 text-->
-    <div class="panel" data-color="white">
+    <div class="panel centered" data-color="white">
       <h1 class="display-1">[what it looks like today + maps]</h1>
     </div>
-    <div class="panel" data-color="black">
+    <div class="panel centered" data-color="black">
       <h1 class="display-1" style="color: white">Let's go back to 1900</h1>
     </div>
 
@@ -53,17 +53,60 @@
       text text text text text text text text text text text text text text text
       text text text text text text text text text text text text text text
     </section>
-    <div class="panel" data-color="black"></div>
+    <div class="panel" data-color="black">
+    <div style="margin-left: 10vmin; padding-top: 10vmin; margin-bottom: 2vmin">
+      <button class="dark-button" onclick="revealProcess('dataprocess1')">
+        Curious about the data processing?
+      </button>
+    </div>
+    <div class="process" id="dataprocess1" style="color: white; border: solid 3px white">
+      <ol type="1">
+        <li>
+          I digitized a few sheets from the 1900 census, with the help of Lea
+          Henaux.
+          <ol type="a">
+            <li>
+              The person responsible for collecting census data of this
+              neighborhood (Archie L. Hyde as indicated on the sheets) had
+              cursive handwriting, which is at times hard to read. I used
+              <a style="color:rgb(172, 172, 172)"
+                href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DbGtmv9SY56k&psig=AOvVaw0r_XWMmbutRzUabrcFL_si&ust=1681413386978000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCKiJjY-Hpf4CFQAAAAAdAAAAABAE"
+                >this</a
+              >
+              cursive style as a reference to resolve unclear words and letters.
+            </li>
+            <li>
+              I kept transcripts as close to the original as possible. Illegible
+              entries are marked [illegible]. Empty cells are kept empty. Name
+              spelling is preserved.
+            </li>
+          </ol>
+        </li>
+        <li>
+          I used the
+          <a style="color:rgb(172, 172, 172)"
+            href="https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~213960~5501185:Vol--2%2C-Page-141-142--San-Francisco?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=w4s:/what%2FInsurance%2C%2BFire;q:Pub_Title%3D%22Insurance%20Maps.%20San%20Francisco%2C%20California.%20Published%20by%20Sanborn-Perris%20Map%20Co.%20Limited%2C%20115%20Broadway%2C%20New%20York.%201899.%20Scale%2C%2050%20Ft.%20to%20an%20Inch.%20Copyright%201899%2C%20by%20the%20Sanborn-Perris%20Map%20Co.%20Limited.%22;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=76&trs=377"
+          >
+            the 1905 Sanborn fire insurance maps atlas</a
+          >
+          to filter out the house numbers that are not part of the block.
+        </li>
+      </ol>
+    </div>
+    </div>
     <div class="panel" data-color="white"></div>
-    <!--Observable Notebook-->
-    <!-- <iframe width="100%" height="500" frameborder="0"
-    src="https://observablehq.com/embed/@ana-peykova/year-and-place-of-birth@980?cell=*"></iframe>
-    <div class="panel" data-color="white"></div> -->
 
+    <!--Year & Place of Birth Data-->
     <div
-      id="observablehq-37a93390"
-      style="height: 710px; overflow-y: hidden; padding-inline: 10vmin"
+      id="observablehq-7227ab6a"
+      style="
+        height: 810px;
+        margin-top: 10vmin;
+        overflow-y: hidden;
+        padding-inline: 10vmin;
+      "
     ></div>
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css"
@@ -73,13 +116,103 @@
         Runtime,
         Inspector,
       } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-      import define from "https://api.observablehq.com/@ana-peykova/year-and-place-of-birth@1004.js?v=3";
-      new Runtime().module(define, Inspector.into("#observablehq-37a93390"));
+      import define from "https://api.observablehq.com/@ana-peykova/year-and-place-of-birth@1237.js?v=3";
+      new Runtime().module(define, Inspector.into("#observablehq-7227ab6a"));
     </script>
-    <p style="margin-left: 10vmin; margin-top: 5vmin"><button onclick="revealProcess()">Curious about the data processing?</button></p>
-    <div id="process" style="margin-inline: 10vmin; padding: 2vmin; border: solid black 2px; display: none;">
-      The process <br> 1. did this <br> 2. did that <br> 3. this this
+
+    <!-- Process reveal -->
+    <div style="margin-left: 10vmin; padding-top: 10vmin; margin-bottom: 2vmin">
+      <button onclick="revealProcess('dataprocess2')">
+        Curious about the data processing?
+      </button>
     </div>
+    <div class="process" id="dataprocess2">
+      <ol type="1">
+        <li>
+          I georeferenced the places of birth using Awesome Table's
+          <a style="color:rgb(101, 101, 101)"
+            href="https://workspace.google.com/marketplace/app/geocode_by_awesome_table/904124517349"
+            >Geocode</a
+          >
+          plugin for Google Sheets.
+          <ol type="a">
+            <li>
+              For countries, Geocode picks the center as a point of reference,
+              using modern day international borders. Due to limited information
+              and changing borders, the points do not mark the precise place of
+              birth but give a general location.
+            </li>
+            <li>
+              Many of the residents were born in the same places, resulting in
+              overlapping points. This makes the map hard to read and obscures
+              the actual number of residents. To patch this issue, I implemented
+              an element of randomness to the georeferenced coordinates, adding
+              a random value between -1 and 1 to each. This makes for a
+              negligible shift along the lattitude and longtitude of location
+              and the point is still within the original country, capturing the
+              place of birth with the same level of precision.
+            </li>
+            <li>
+              Bohemia does not exist as a country anymore, and Geocode could not
+              georeference it. In 1900, Bohemia's capital was Prague. I manually
+              georeferenced Bohemia entries to point to Prague.
+            </li>
+            <li>
+              I manually changed Russia's georeference to Moscow. Geocode placed
+              Russia in Siberia (middle of the country), but my educated guess
+              is that Russian immigrants came from the west of the country. On
+              another note, Plot.js visualizes links between 2 points as the
+              shortest path. The link between Siberia and the US (in the
+              Connecting Families map) goes over the Pacific Ocean. This creates
+              an inaccurate representation: the majority of immigrants (John
+              Spade included) reached the US through the Atlantic. Hence,
+              "moving" Russia to Moscow makes the map a better historical
+              representation.
+            </li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+    <p>The 1900 census data</p>
+
+    <!-- Connecting Family Data -->
+
+    <div
+      id="observablehq-f205bf7b"
+      style="
+        height: 870px;
+        margin-top: 10vmin;
+        overflow-y: hidden;
+        padding-inline: 10vmin;
+      "
+    ></div>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css"
+    />
+    <script type="module">
+      import {
+        Runtime,
+        Inspector,
+      } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+      import define from "https://api.observablehq.com/d/7e6602d27f121250@1517.js?v=3";
+      new Runtime().module(define, Inspector.into("#observablehq-f205bf7b"));
+    </script>
+
+    <!-- Process reveal -->
+    <div style="margin-left: 10vmin; padding-top: 10vmin; margin-bottom: 2vmin">
+      <button onclick="revealProcess('dataprocess3')">
+        Curious about the data processing?
+      </button>
+    </div>
+    <div class="process" id="dataprocess3">
+      The process <br />
+      1. did this <br />
+      2. did that <br />
+      3. this this
+    </div>
+
     <div class="panel" data-color="white"></div>
   </body>
 </html>
