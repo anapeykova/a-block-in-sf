@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <title>A Block in San Francisco</title>
+    <base target="_blank">
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
@@ -38,10 +39,11 @@
       <h1 class="display-1">[what it looks like today + maps]</h1>
     </div>
     <div class="panel centered" data-color="black">
-      <h1 class="display-1" style="color: white">Let's go back to 1900</h1>
+      <h1 class="display-1 light-text">Let's go back to 1900</h1>
     </div>
 
     <!--1900 parallax-->
+    <div style="background-color: var(--dark)"></div>
     <div class="parallax" style="background-image: url(images/old-sf.jpg)">
       <img src="images/people.png" class="sketches" />
     </div>
@@ -54,12 +56,12 @@
       text text text text text text text text text text text text text text
     </section>
     <div class="panel" data-color="black">
-    <div style="margin-left: 10vmin; padding-top: 10vmin; margin-bottom: 2vmin">
+    <div class="hidden-process">
       <button class="dark-button" onclick="revealProcess('dataprocess1')">
-        Curious about the data processing?
+        SOURCES & PROCESS
       </button>
     </div>
-    <div class="process" id="dataprocess1" style="color: white; border: solid 3px white">
+    <div class="process" id="dataprocess1" style="color: white; border: solid 3px var(--dark2)">
       <ol type="1">
         <li>
           I digitized a few sheets from the 1900 census, with the help of Lea
@@ -69,7 +71,7 @@
               The person responsible for collecting census data of this
               neighborhood (Archie L. Hyde as indicated on the sheets) had
               cursive handwriting, which is at times hard to read. I used
-              <a style="color:rgb(172, 172, 172)"
+              <a style="color: var(--link-dark)"
                 href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DbGtmv9SY56k&psig=AOvVaw0r_XWMmbutRzUabrcFL_si&ust=1681413386978000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCKiJjY-Hpf4CFQAAAAAdAAAAABAE"
                 >this</a
               >
@@ -84,7 +86,7 @@
         </li>
         <li>
           I used the
-          <a style="color:rgb(172, 172, 172)"
+          <a style="color:var(--link-dark)"
             href="https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~213960~5501185:Vol--2%2C-Page-141-142--San-Francisco?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=w4s:/what%2FInsurance%2C%2BFire;q:Pub_Title%3D%22Insurance%20Maps.%20San%20Francisco%2C%20California.%20Published%20by%20Sanborn-Perris%20Map%20Co.%20Limited%2C%20115%20Broadway%2C%20New%20York.%201899.%20Scale%2C%2050%20Ft.%20to%20an%20Inch.%20Copyright%201899%2C%20by%20the%20Sanborn-Perris%20Map%20Co.%20Limited.%22;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=76&trs=377"
           >
             the 1905 Sanborn fire insurance maps atlas</a
@@ -97,40 +99,33 @@
     <div class="panel" data-color="white"></div>
 
     <!--Year & Place of Birth Data-->
-    <div
-      id="observablehq-7227ab6a"
+    <h1 class="display-1">Year & place of birth</h1>
+    <div id="observablehq-e57a40f8"
       style="
-        height: 810px;
-        margin-top: 10vmin;
+        margin-top: 5vmin;
+        margin-inline: 15vw;
+        height: 540px;
         overflow-y: hidden;
-        padding-inline: 10vmin;
-      "
-    ></div>
-
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css"
-    />
+      ">
+    </div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
     <script type="module">
-      import {
-        Runtime,
-        Inspector,
-      } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-      import define from "https://api.observablehq.com/@ana-peykova/year-and-place-of-birth@1237.js?v=3";
-      new Runtime().module(define, Inspector.into("#observablehq-7227ab6a"));
+    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+    import define from "https://api.observablehq.com/@ana-peykova/year-and-place-of-birth@1274.js?v=3";
+    new Runtime().module(define, Inspector.into("#observablehq-e57a40f8"));
     </script>
 
     <!-- Process reveal -->
-    <div style="margin-left: 10vmin; padding-top: 10vmin; margin-bottom: 2vmin">
+    <div class="hidden-process">
       <button onclick="revealProcess('dataprocess2')">
-        Curious about the data processing?
+        SOURCES & PROCESS
       </button>
     </div>
     <div class="process" id="dataprocess2">
       <ol type="1">
         <li>
           I georeferenced the places of birth using Awesome Table's
-          <a style="color:rgb(101, 101, 101)"
+          <a style="color:var(--link-light)"
             href="https://workspace.google.com/marketplace/app/geocode_by_awesome_table/904124517349"
             >Geocode</a
           >
@@ -164,8 +159,7 @@
               another note, Plot.js visualizes links between 2 points as the
               shortest path. The link between Siberia and the US (in the
               Connecting Families map) goes over the Pacific Ocean. This creates
-              an inaccurate representation: the majority of immigrants (John
-              Spade included) reached the US through the Atlantic. Hence,
+              an inaccurate representation: the majority of immigrants reached the US through the Atlantic. Hence,
               "moving" Russia to Moscow makes the map a better historical
               representation.
             </li>
@@ -173,46 +167,80 @@
         </li>
       </ol>
     </div>
-    <p>The 1900 census data</p>
+    <p>The map above displays the birthplaces of the individuals residing in the block in 1900. You can adjust the time period by using the slider and get additional information on specific dots by hovering over them.</p>
+    <p>One issue with this visualization is that the slider implies some dynamism, while the dots remain static. This arises from a lack of information, as we only have knowledge of the residents' birthplaces and their location in July 1900. The time in between remains uncertain. Although the census contains the year of immigration to the US for some of those born outside the country, it does not capture their point of entry. We can fill in some gaps through inductive reasoning.</p>
+    <p>The 1900 census provides both <em>explicit</em> and <em>implicit</em> data about the block's inhabitants. Explicit data refers to information that is readily provided either by the census official (Archie L. Hyde), such as address, or by the individuals themselves upon inquiry, such as name, place and year of birth, occupation, etc. Implicit data is anything else that can be inferred from the data. For example, based on a resident's month of birth, we can deduce their zodiac sign (did you notice on the map above?) Although this may not reveal much, it serves as a useful example of <em>deductive</em> inference from the available data.
+    </p>
+    <p><em>Inductive</em> reasoning is more likely to produce erroneous conclusions but is also potentially more enlightening when working with census data. Based on occupation and location, we can infer annual income; based on country of origin, we can infer about religious and cultural belonging; and so on.</p>
+    <p>Going back to the map above, we can track families's locations throughout the years based on their children's place and year of birth.</p>
 
     <!-- Connecting Family Data -->
-
-    <div
-      id="observablehq-f205bf7b"
+    <h1 class="display-1">Connecting family data</h1>
+    <div id="observablehq-ebff5e05"
       style="
-        height: 870px;
-        margin-top: 10vmin;
+        margin-top: 5vmin;
+        margin-inline: 15vw;
+        height: 615px;
         overflow-y: hidden;
-        padding-inline: 10vmin;
-      "
-    ></div>
+      ">
+    </div>
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
     <script type="module">
-      import {
-        Runtime,
-        Inspector,
-      } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-      import define from "https://api.observablehq.com/d/7e6602d27f121250@1517.js?v=3";
-      new Runtime().module(define, Inspector.into("#observablehq-f205bf7b"));
+    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+    import define from "https://api.observablehq.com/d/7e6602d27f121250.js?v=3";
+    new Runtime().module(define, Inspector.into("#observablehq-ebff5e05"));
     </script>
-
     <!-- Process reveal -->
-    <div style="margin-left: 10vmin; padding-top: 10vmin; margin-bottom: 2vmin">
+    <div class="hidden-process">
       <button onclick="revealProcess('dataprocess3')">
-        Curious about the data processing?
+        SOURCES & PROCESS
       </button>
     </div>
     <div class="process" id="dataprocess3">
-      The process <br />
-      1. did this <br />
-      2. did that <br />
-      3. this this
+      <ol type:"1">
+        <li>I organized residents into families, based on (in order of consideration) relationship to household head, last name, marital status, gender and year of birth.
+          <ol type="a">
+            <li>A family consists of "head" (typically male but can be a widowed woman), "wife", "son", "daughter". Other relationships like "nephew", "step-daughter" or "brother-in-law" are also considered part of the family.</li>
+            <li>The 1900 census data assumes there can be only one head for each household. If there are 2 or more families living under the same roof, only one family (presumably the house owners) are listed as family members. All others are marked as "lodgers".</li>
+            <ol type="1">
+              <li>I used the combination of last names, gender and marital status to inductively determine couples. For example, two consecutive entries with the same last name, both married, one male and one female and with an age difference of less than 15 years are likely a couple. This inductive inference rests on 2 assumptions: (1) only heterosexual marriages were legal in 1900, and (2) wives would adopt their husband's last name.</li>
+              <li>Extending one the above, I used last names and parents' place of birth along with year of birth and sex to determine sons and daughters in the family.</li>
+              <li>It is possible, of course, that the "children" are nephews or the adults are not married but have coinciding last names. My assumptions are made following the Occam's razor principle, favoring the simplest possible explanation.</li>
+              <li>For transparency, I preserved the "lodger" label along with the presumed role in the family. For example, L. Landram is marked "lodger, likely wife" </li>
+            </ol>
+           <li>I gave each family an integer code. Single individuals with no assumed family belonging are marked as separate famililes.</li> 
+          </ol>
+        </li>
+        <li>I filtered out families with less than 3 members, excluding single people and married couples with no children living with them.</li>
+        <li>I plotted families known locations using the georeferenced places of birth and year of birth, assuming the father was present for the birth of each child (it is logically necessary the mother was present).</li>
+      </ol>
     </div>
 
     <div class="panel" data-color="white"></div>
+    <div class="panel centered" data-color="black">
+      <h class="display-1 light-text">Continue exploring</h>
+    </div>
+    <div class="parallax" style="background-image: url(images/old-sf.jpg); min-height: 50vh"></div>
+
+    <div class="light-text" style="padding-bottom: 10vmin; background-color: var(--dark);">
+      <h3 class="display-6">My sources</h3>
+      <p>Find the transcribed data set <a href="" style="color: var(--link-dark)">here</a>, available for Minerva University students and faculty, or upon request.</p>
+      <h3 class="display-6">Other sources</h3>
+      <p>The 19th to 20th century immigration to the US is fairly well-recorded. There are many (far more extensive than mine) records and archives available online, such as: </p>
+        <ul style="list-style-type: none;">
+          <li><a href="https://heritage.statueofliberty.org/" style="color: var(--link-dark)"> Ellis Island Passanger Database</a></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <h3 class="display-6">Where to start?</h3>
+      <p> Most databases allow users to retrieve data based on specific inquiries. If you don't know where to start, here are a few challenges for you, in order of increasing difficulty.</p>
+        <ul>
+          <li>French-born taxidermist Ernest Lorquin lived in 1195 Market St. Where was his shop?</li>
+          <li>The 1900 census data alone allows us to track families locations throughout the years, but we can do the same for individuals by combining multiple sources. Can you map John Spade's journey from Russia to 1139 Market St?</li>
+          <li>Margaret Raleigh, mother of 3 and head of the 652 Stevenson St household, was born at sea in May 1855. Why would it be harder to track down her family's voyage to the US (for example, compared to John Spade's)?</li>
+        </ul>
+    </div>
+    <footer>Ana Peykova, 2023 ・ <a href="https://github.com/anapeykova/a-block-in-sf" style="color: var(--link-dark)">github</a> ・ <a href="https://observablehq.com/@ana-peykova" style="color: var(--link-dark)">Observable</a></footer>
   </body>
 </html>
