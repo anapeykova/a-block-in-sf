@@ -68,6 +68,7 @@ h3 {
 }
 
 .hidden-process {
+  font-size: 3vh;
   margin-top: 5vh;
   margin-inline: var(--marg);
   padding-top: 2vh;
@@ -91,6 +92,7 @@ h3 {
 }
 
 section {
+  font-size: 3vh;
   padding-top: 5vh;
   line-height: 200%;
   padding-inline: var(--marg);
@@ -104,11 +106,13 @@ section {
 }
 
 ol li {
+  font-size: 3vh;
   margin-bottom: 1vh;
   margin-top: 1vh;
 }
 
 ul li {
+  font-size: 3vh;
   margin-inline: var(--marg);
   margin-top: 1vh;
   margin-bottom: 1vh;
@@ -121,6 +125,7 @@ a:link {
 
 
 p {
+  font-size: 3vh;
   padding-top: 2vh;
   padding-inline: var(--marg);
 }
@@ -130,6 +135,7 @@ p {
 }
 
 button {
+  font-size: 3vh;
   margin-inline: var(--marg);
   padding: 2vh;
   border-radius: 10;
@@ -143,6 +149,7 @@ button:hover {
 }
 
 .dark-button {
+  font-size: 3vh;
   border: solid 3px var(--dark2);
   background-color: var(--dark);
   color: white;
