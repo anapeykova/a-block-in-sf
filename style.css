@@ -5,7 +5,7 @@
   --lighter: #9dcae0;
   --link-light: #5aace7;
   --link-dark: rgb(195, 235, 255);
-  --marg: 0vmin;
+  --marg: 0vh;
 }
 body {
   margin: 0;
@@ -29,7 +29,7 @@ h1 {
 
 
 h3 {
-  padding-top: 5vmin;
+  padding-top: 5vh;
   margin-inline: var(--marg);
   text-align: start;
 }
@@ -68,16 +68,16 @@ h3 {
 }
 
 .hidden-process {
-  margin-top: 5vmin;
+  margin-top: 5vh;
   margin-inline: var(--marg);
-  padding-top: 2vmin;
-  margin-bottom: 2vmin;
+  padding-top: 2vh;
+  margin-bottom: 2vh;
 }
 
 .process {
   display: flex;
   margin-inline: var(--marg);
-  padding: 2vmin;
+  padding: 2vh;
   border: solid 3px var(--light);
   font-size:15px;
   display: none;
@@ -91,7 +91,7 @@ h3 {
 }
 
 section {
-  padding-top: 5vmin;
+  padding-top: 5vh;
   line-height: 200%;
   padding-inline: var(--marg);
   background-color: #ffffff;
@@ -104,14 +104,14 @@ section {
 }
 
 ol li {
-  margin-bottom: 1vmin;
-  margin-top: 1vmin;
+  margin-bottom: 1vh;
+  margin-top: 1vh;
 }
 
 ul li {
   margin-inline: var(--marg);
-  margin-top: 1vmin;
-  margin-bottom: 1vmin;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
 }
 
 a:link {
@@ -121,7 +121,7 @@ a:link {
 
 
 p {
-  padding-top: 2vmin;
+  padding-top: 2vh;
   padding-inline: var(--marg);
 }
 
@@ -131,7 +131,7 @@ p {
 
 button {
   margin-inline: var(--marg);
-  padding: 2vmin;
+  padding: 2vh;
   border-radius: 10;
   background-color: white;
   border: solid 3px var(--light);
@@ -161,9 +161,9 @@ footer {
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 2vmin;
-  padding-top: 30vmin;
-  padding-bottom: 3vmin;
+  font-size: 2vh;
+  padding-top: 30vh;
+  padding-bottom: 3vh;
 }
 
 
