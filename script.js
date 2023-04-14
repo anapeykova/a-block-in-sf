@@ -18,6 +18,7 @@ $(window)
         });
 
         $body.addClass("color-" + $(this).data("color"));
+
       }
     });
   })

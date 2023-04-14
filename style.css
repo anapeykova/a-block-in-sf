@@ -5,7 +5,7 @@
   --lighter: #9dcae0;
   --link-light: #5aace7;
   --link-dark: rgb(195, 235, 255);
-  --marg: 40vmin;
+  --marg: 0vmin;
 }
 body {
   margin: 0;
@@ -160,7 +160,7 @@ footer {
   text-align: center;
   justify-content: center;
   align-items: center;
-  color: var(--lighter);
+  color: white;
   font-size: 2vmin;
   padding-top: 30vmin;
   padding-bottom: 3vmin;
