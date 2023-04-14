@@ -126,7 +126,9 @@
 
     <!-- Process reveal -->
     <div class="hidden-process">
-      <button onclick="revealProcess('dataprocess2')">
+      <div class="col-8">
+        <p><em>The map above displays the birthplaces of the residents in the block in 1900. You can adjust the time period with the slider and get information on specific dots by hovering over them.</em></p></div>
+      <button class="col-3  offset-1" onclick="revealProcess('dataprocess2')">
         SOURCES & PROCESS
       </button>
     </div>
@@ -168,7 +170,7 @@
               another note, Plot.js visualizes links between 2 points as the
               shortest path. The link between Siberia and the US (in the
               Connecting Families map) goes over the Pacific Ocean. This creates
-              an inaccurate representation: the majority of immigrants reached the US through the Atlantic. Hence,
+              an inaccurate representation: white immigrants in 19th century reached the US through the Atlantic; San Francisco became an important immigration port only in the 20th century with its infamous <a href="https://www.aiisf.org/history#:~:text=In%20January%201910%2C%20over%20the,to%20receive%20its%20first%20guests." style="color:var(--link-light)">Angel Island Station established in 1910</a>. Hence,
               "moving" Russia to Moscow makes the map a better historical
               representation.
             </li>
@@ -176,32 +178,37 @@
         </li>
       </ol>
     </div>
-    <p>The map above displays the birthplaces of the individuals residing in the block in 1900. You can adjust the time period by using the slider and get additional information on specific dots by hovering over them.</p>
+    <h3 class="display-6">Shortcomings</h3>
+    <hr>
     <p>One issue with this visualization is that the slider implies some dynamism, while the dots remain static. This arises from a lack of information, as we only have knowledge of the residents' birthplaces and their location in July 1900. The time in between remains uncertain. Although the census contains the year of immigration to the US for some of those born outside the country, it does not capture their point of entry. We can fill in some gaps through inductive reasoning.</p>
-    <p>The 1900 census provides both <em>explicit</em> and <em>implicit</em> data about the block's inhabitants. Explicit data refers to information that is readily provided either by the census official (Archie L. Hyde), such as address, or by the individuals themselves upon inquiry, such as name, place and year of birth, occupation, etc. Implicit data is anything else that can be inferred from the data. For example, based on a resident's month of birth, we can deduce their zodiac sign (did you notice on the map above?) Although this may not reveal much, it serves as a useful example of <em>deductive</em> inference from the available data.
+    <h3 class="display-6">Census data: what does it tell us?</h3>
+    <hr>
+    <p>The 1900 census provides both <em>explicit</em> and <em>implicit</em> data about the block's inhabitants. Explicit data refers to information that is readily provided either by the census official (Archie L. Hyde), such as address, or by the individuals themselves upon inquiry, such as name, place and year of birth, occupation, etc. Implicit data is anything else that can be inferred from the data. For example, based on a resident's known month of birth, we can deduce their zodiac sign (did you notice on the map above?) Although this may not reveal much, it serves as a useful example of <em>deductive</em> inference from the available data.
     </p>
     <p><em>Inductive</em> reasoning is more likely to produce erroneous conclusions but is also potentially more enlightening when working with census data. Based on occupation and location, we can infer annual income; based on country of origin, we can infer about religious and cultural belonging; and so on.</p>
     <p>Going back to the map above, we can track families's locations throughout the years based on their children's place and year of birth.</p>
 
     <!-- Connecting Family Data -->
     <h1 class="display-3">Connecting family data</h1>
-    <div id="observablehq-ebff5e05"
+    <div id="observablehq-f31b5be6"
       style="
         margin-top: 5vmin;
         height: 610px;
         overflow-y: hidden;
       ">
-    </div>
-
+    </div>    
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
     <script type="module">
     import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-    import define from "https://api.observablehq.com/d/7e6602d27f121250.js?v=3";
-    new Runtime().module(define, Inspector.into("#observablehq-ebff5e05"));
+    import define from "https://api.observablehq.com/d/7e6602d27f121250@1594.js?v=3";
+    new Runtime().module(define, Inspector.into("#observablehq-f31b5be6"));
     </script>
     <!-- Process reveal -->
     <div class="hidden-process">
-      <button onclick="revealProcess('dataprocess3')">
+      <div class="col-8">
+        <p><em>The map above allows you to track families' known locations prior to 1900. Use the drop down menu to choose a family and the slider to adjust the time period.</em></p></div>
+      <button class="col-3  offset-1" onclick="revealProcess('dataprocess3')">
         SOURCES & PROCESS
       </button>
     </div>
@@ -224,8 +231,22 @@
         <li>I plotted families known locations using the georeferenced places of birth and year of birth, assuming the father was present for the birth of each child (it is logically necessary the mother was present).</li>
       </ol>
     </div>
+    <h3 class="display-6">All roads lead to San Francisco</h3>
+    <hr>
+    <p>The residents living inside the block of Market, 7th, 8th and Stevennson St were a diverse (all white) group. The grouping by families aims to capture the different paths they took to reach the same block in San Francisco.</p>
+    <p>Both maps combined suggest that most residents of the block in 1900 moved to (or were born in immigrant families in) California after 1860. This coincides with the <a href="https://www.jstor.org/stable/3639818" style="color:var(--link-light)">rapid population growth of San Francisco during the Gold Rush era</a>. </p>
+    <h3 class="display-6">Another map, more shortcomings</h3>
+    <hr>  
+    <p>The general trend of the family routes above is moving westward, meaning most likely arrived in the US crossing the Atlantic Ocean. On average, the 5000 km trip across the ocean took roughly <a href="https://transportgeography.org/contents/chapter1/emergence-of-mechanized-transportation-systems/liner-transatlantic-crossing-time/" style="color: var(--link-light)">6-10 days</a>. California, and the West Coast in general, was another 5000 km away - a journey that without any stops along the way could take weeks or even months.</p>  
+    <p>The map above is clearly incomplete. The limited information results in very few arrows across big distances, more representative of modern-day flights rather than the long routes along roads, rivers and seaways across 19th century Europe and North America. It is possible to fill in some of the location gaps with information from other resources like censuses from different years, immigration ships passenger records, other archives, etc. Personal diaries, memoirs, family histories and others can make the narratives more human. Multilayered, interlinked data would allow us to situate immigrants' backgrounds and experiences.
+    <p>However, on a conceptual level, all these data points do not (and cannot) capture the human experience. While family links combine pieces of information into a connected narrative, they leave out just as much as what they tell us.</p>
+    <p>Historian <a href="https://historyonics.blogspot.com/2013/12/big-data-for-dead-people-digital.html" style="color:var(--link-light)">Tim Hitchcock argues</a> that while data approaches offer new ways of reading the past, they also bring about a tension between traditional historical analysis and emerging histories associated with big data. The uses of mathematical representations and hyper-precise locations plotted against the modern map of the world assume a certain level of truth in the data that is likely at odds with traditional forms of historical analysis.</p>
+    <p>Anthropologist Michel-Rolph Trouillot’s concept of historicity, as defined it in his book <a href="https://books.google.co.in/books/about/Silencing_the_Past.html?id=qNkBDlueIxUC&redir_esc=y" style="color: var(--link-light);"><em>Silencing the Past</em></a>, can help better illustrate the difference between these approaches. The first side of historicity is concerned with the production of history as the factual past; the second side of historicity is the study of the ever-evolving narratives about the past built off of historicity 1. Big data approaches have the potential to uncover new patterns or give novel perspectives through modern processing technologies. Such findings are necessarily grounded in data — factual information — expanding the possibilities and socio-cultural influence of historicity #1. Trouillot stresses the importance of historicity #2 in the process of historical production. Grounding our understanding and beliefs about the past solely in historicity #1 overlooks the crucial role society and culture play in shaping it.</p>
+    <p>Hitchcock resolves the tension between factuality and narrative in history by claiming that history is a genre constructed by society and its needs and as such its nature and goals are subject to constant change. The current technological development and culture make big data a useful tool in understanding the past. And yet, reflecting on his in-depth data study of the life of Sarah Durrant, Hitchcock concludes with:</p>
+    <p style="margin-inline: 4vmin"><em>I will read anew, and use all the tools of big data, of ngrams and power laws; and I will publish the results with graphs, tables and GIS; but I refuse to forget that my object of study, my objective, is an emotional, imaginative and empathetic engagement with Sarah Durrant, and all the people like her.</em></p>
+    <p></p>
 
-    <div class="panel" data-color="white"></div>
+    <div class="panel" data-color="white" style="min-height: 30vh;"></div>
     <div class="panel centered" data-color="black">
       <h class="display-1 light-text">Continue exploring</h>
     </div>
@@ -234,29 +255,34 @@
     </div>
     
     <div class="parallax" style="background-image: url(images/old-sf.jpg); min-height: 50vh"></div>
-    <div class="container-fluid">
+    <div class="container-fluid" style="background-color: var(--dark);">
       <div class="row justify-content-center">
       <div class="col-10 col-lg-8">
     <div class="light-text" style="padding-bottom: 10vmin; background-color: var(--dark);">
       <h3 class="display-6">My sources</h3>
-      <p>Find the transcribed data set <a href="" style="color: var(--link-dark)">here</a>, available for Minerva University students and faculty, or upon request.</p>
+      <hr>
+      <p>You can download the filtered & scrubbed dataset (150 entries, only selected columns and intials instead of first names) used for the maps above directly from my <a href="https://observablehq.com/@ana-peykova" style="color: var(--link-dark)">Observable notebooks</a>.<br><br> Find the full transcribed dataset (350 entries) <a href="https://docs.google.com/spreadsheets/d/1xjWBPhMaiWKb6jitSkck8qbjAXLWjcF7NLY7Tfncza0/edit?usp=sharing" style="color: var(--link-dark)">here</a>, available for Minerva University students and faculty, or upon request.</p>
       <h3 class="display-6">Other sources</h3>
-      <p>The 19th to 20th century immigration to the US is fairly well-recorded. There are many (far more extensive than mine) records and archives available online, such as: </p>
-        <ul style="list-style-type: none;">
-          <li><a href="https://heritage.statueofliberty.org/" style="color: var(--link-dark)"> Ellis Island Passanger Database</a></li>
-          <li></li>
-          <li></li>
+      <hr>
+      <p>The 19th to 20th century immigration to the US is fairly well-recorded. There are many (far more extensive than mine) digitized records and archives of immigrant arrivals in the 19th century, such as: </p>
+        <ul>
+          <li><a href="https://heritage.statueofliberty.org/" style="color: var(--link-dark)">The Ellis Island Passanger Database</a> contains records of over 60 million passengers who arrived at the port of New York in the 19th and 20th centuries.</li>
+          <li><a href="https://www.immigrantships.net/" style="color: var(--link-dark)">The Immigrant Ship Transcribers Guild</a> is a database of 26 000+ entries from multiple ports. The organization is completely operated by volunteers, and they are open to new members.</li>
+          <li><a href="https://www.archives.gov/digitization/digitized-by-partners" style="color: var(--link-dark)">The National Archives</a> has an index of digitized collections by different organizations. Search keyword "passengers" to find relevant databases.</li>
         </ul>
         <h3 class="display-6">Where to start?</h3>
-      <p> Most databases allow users to retrieve data based on specific inquiries. If you don't know where to start, here are a few challenges for you, in order of increasing difficulty.</p>
+        <hr>
+      <p> Google & most databases require specific inquiries to retrieve data. If you don't know where to start, here are some challenges for you.</p>
         <ul>
           <li>French-born taxidermist Ernest Lorquin lived in 1195 Market St. Where was his shop?</li>
           <li>The 1900 census data alone allows us to track families locations throughout the years, but we can do the same for individuals by combining multiple sources. Can you map John Spade's journey from Russia to 1139 Market St?</li>
-          <li>Margaret Raleigh, mother of 3 and head of the 652 Stevenson St household, was born at sea in May 1855. Why would it be harder to track down her family's voyage to the US (for example, compared to John Spade's)?</li>
+          <li>Margaret Raleigh, mother of 3 and head of the 652 Stevenson St household, was born at sea in May 1855. Try to track her family's voyage to the US. What social norms and power structures make this harder (e.g. compared to John Spade's case)?</li>
         </ul>
     </div>
-    <footer>Ana Peykova, 2023 ・ <a href="https://github.com/anapeykova/a-block-in-sf" style="color: var(--link-dark)">github</a> ・ <a href="https://observablehq.com/@ana-peykova" style="color: var(--link-dark)">Observable</a></footer>
   </div>
-</div>  </div>
+</div>
+</div>
+    <footer>Ana Peykova, 2023 ・ <a href="https://github.com/anapeykova/a-block-in-sf" style="color: var(--link-dark)">github</a> ・ <a href="https://observablehq.com/@ana-peykova" style="color: var(--link-dark)">Observable</a></footer>
+
   </body>
 </html>

@@ -5,7 +5,6 @@
   --lighter: #9dcae0;
   --link-light: #5aace7;
   --link-dark: rgb(195, 235, 255);
-  --marg: 0vh;
 }
 body {
   margin: 0;
@@ -17,8 +16,6 @@ body {
 }
 
 h1 {
-  padding-inline: var(--marg);
-  /* font-size: var(--marg);
   font-weight: 50; */
   color: #222;
   padding-top: 10%;
@@ -30,7 +27,6 @@ h1 {
 
 h3 {
   padding-top: 5vh;
-  margin-inline: var(--marg);
   text-align: start;
 }
 
@@ -68,16 +64,15 @@ h3 {
 }
 
 .hidden-process {
+  display: flex;
   font-size: 2vh;
   margin-top: 5vh;
-  margin-inline: var(--marg);
   padding-top: 2vh;
   margin-bottom: 2vh;
 }
 
 .process {
   display: flex;
-  margin-inline: var(--marg);
   padding: 2vh;
   border: solid 3px var(--light);
   font-size:1vh;
@@ -95,7 +90,6 @@ section {
   font-size: 2vh;
   padding-top: 5vh;
   line-height: 200%;
-  padding-inline: var(--marg);
   background-color: #ffffff;
   color: #222;
 }
@@ -113,7 +107,6 @@ ol li {
 
 ul li {
   font-size: 2vh;
-  margin-inline: var(--marg);
   margin-top: 1vh;
   margin-bottom: 1vh;
 }
@@ -123,11 +116,14 @@ a:link {
   z-index: 1;
 }
 
+hr {
+  width: 5vw;
+  border-top: solid 10px;
+}
 
 p {
   font-size: 2vh;
-  padding-top: 2vh;
-  padding-inline: var(--marg);
+  padding-top: 1vh;
 }
 
 .light-text {
@@ -136,7 +132,6 @@ p {
 
 button {
   font-size: 2vh;
-  margin-inline: var(--marg);
   padding: 2vh;
   border-radius: 10;
   background-color: white;
@@ -168,9 +163,9 @@ footer {
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 1vh;
-  padding-top: 30vh;
-  padding-bottom: 3vh;
+  font-size: 2vh;
+  padding-top: 10vh;
+  padding-bottom: 2vh;
 }
 
 
