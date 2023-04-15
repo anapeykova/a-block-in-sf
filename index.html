@@ -110,18 +110,19 @@
 
     <!--Year & Place of Birth Data-->
     <h1 class="display-3">Year & place of birth</h1>
-    <div id="observablehq-e57a40f8"
-      style="
+    <div id="observablehq-0fad4914"
+        style="
         margin-top: 5vmin;
         height: 535px;
         overflow-y: hidden;
       ">
     </div>
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
     <script type="module">
     import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-    import define from "https://api.observablehq.com/@ana-peykova/year-and-place-of-birth@1274.js?v=3";
-    new Runtime().module(define, Inspector.into("#observablehq-e57a40f8"));
+    import define from "https://api.observablehq.com/@ana-peykova/year-and-place-of-birth@1287.js?v=3";
+    new Runtime().module(define, Inspector.into("#observablehq-0fad4914"));
     </script>
 
     <!-- Process reveal -->
@@ -180,17 +181,18 @@
     </div>
     <h3 class="display-6">Shortcomings</h3>
     <hr>
+    <p>In the 1900 census data, places of birth are recorded as countries, covering large and demographically diverse regions. The georeferencing tool used to produce these maps handles this lack of precision by placing the country in the middle — of where it is today. There are a lot of problems and workarounds to make georeferencing or at least visualization better — a cheap-and-easy solution is to use bigger markers that cover a larger area to represent the vagueness — but we cannot go beyond what is available as information. Historical sources are often incomplete and fragmented, while working with data implies pin-point accuracy.</p>
     <p>One issue with this visualization is that the slider implies some dynamism, while the dots remain static. This arises from a lack of information, as we only have knowledge of the residents' birthplaces and their location in July 1900. The time in between remains uncertain. Although the census contains the year of immigration to the US for some of those born outside the country, it does not capture their point of entry. We can fill in some gaps through inductive reasoning.</p>
     <h3 class="display-6">Census data: what does it tell us?</h3>
     <hr>
-    <p>The 1900 census provides both <em>explicit</em> and <em>implicit</em> data about the block's inhabitants. Explicit data refers to information that is readily provided either by the census official (Archie L. Hyde), such as address, or by the individuals themselves upon inquiry, such as name, place and year of birth, occupation, etc. Implicit data is anything else that can be inferred from the data. For example, based on a resident's known month of birth, we can deduce their zodiac sign (did you notice on the map above?) Although this may not reveal much, it serves as a useful example of <em>deductive</em> inference from the available data.
+    <p>The 1900 census provides both <em>explicit</em> and <em>implicit</em> data about the block's inhabitants. Explicit data refers to information that is readily provided either by the census official (Archie L. Hyde), such as address, or by the individuals themselves upon inquiry, such as name, place and year of birth, occupation, etc. Implicit data is anything else that can be inferred from the data. For example, based on a resident's known month of birth, we can deduce their zodiac sign (did you notice on the map above?) Although this kind of information may not reveal much, it serves as a useful example of <em>deductive</em> inference from the available data.
     </p>
     <p><em>Inductive</em> reasoning is more likely to produce erroneous conclusions but is also potentially more enlightening when working with census data. Based on occupation and location, we can infer annual income; based on country of origin, we can infer about religious and cultural belonging; and so on.</p>
     <p>Going back to the map above, we can track families's locations throughout the years based on their children's place and year of birth.</p>
 
     <!-- Connecting Family Data -->
     <h1 class="display-3">Connecting family data</h1>
-    <div id="observablehq-f31b5be6"
+    <div id="observablehq-44968b08"
       style="
         margin-top: 5vmin;
         height: 610px;
@@ -201,8 +203,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
     <script type="module">
     import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-    import define from "https://api.observablehq.com/d/7e6602d27f121250@1594.js?v=3";
-    new Runtime().module(define, Inspector.into("#observablehq-f31b5be6"));
+    import define from "https://api.observablehq.com/d/7e6602d27f121250.js?v=3";
+    new Runtime().module(define, Inspector.into("#observablehq-44968b08"));
     </script>
     <!-- Process reveal -->
     <div class="hidden-process">
@@ -238,14 +240,9 @@
     <h3 class="display-6">Another map, more shortcomings</h3>
     <hr>  
     <p>The general trend of the family routes above is moving westward, meaning most likely arrived in the US crossing the Atlantic Ocean. On average, the 5000 km trip across the ocean took roughly <a href="https://transportgeography.org/contents/chapter1/emergence-of-mechanized-transportation-systems/liner-transatlantic-crossing-time/" style="color: var(--link-light)">6-10 days</a>. California, and the West Coast in general, was another 5000 km away - a journey that without any stops along the way could take weeks or even months.</p>  
-    <p>The map above is clearly incomplete. The limited information results in very few arrows across big distances, more representative of modern-day flights rather than the long routes along roads, rivers and seaways across 19th century Europe and North America. It is possible to fill in some of the location gaps with information from other resources like censuses from different years, immigration ships passenger records, other archives, etc. Personal diaries, memoirs, family histories and others can make the narratives more human. Multilayered, interlinked data would allow us to situate immigrants' backgrounds and experiences.
-    <p>However, on a conceptual level, all these data points do not (and cannot) capture the human experience. While family links combine pieces of information into a connected narrative, they leave out just as much as what they tell us.</p>
-    <p>Historian <a href="https://historyonics.blogspot.com/2013/12/big-data-for-dead-people-digital.html" style="color:var(--link-light)">Tim Hitchcock argues</a> that while data approaches offer new ways of reading the past, they also bring about a tension between traditional historical analysis and emerging histories associated with big data. The uses of mathematical representations and hyper-precise locations plotted against the modern map of the world assume a certain level of truth in the data that is likely at odds with traditional forms of historical analysis.</p>
-    <p>Anthropologist Michel-Rolph Trouillot’s concept of historicity, as defined it in his book <a href="https://books.google.co.in/books/about/Silencing_the_Past.html?id=qNkBDlueIxUC&redir_esc=y" style="color: var(--link-light);"><em>Silencing the Past</em></a>, can help better illustrate the difference between these approaches. The first side of historicity is concerned with the production of history as the factual past; the second side of historicity is the study of the ever-evolving narratives about the past built off of historicity 1. Big data approaches have the potential to uncover new patterns or give novel perspectives through modern processing technologies. Such findings are necessarily grounded in data — factual information — expanding the possibilities and socio-cultural influence of historicity #1. Trouillot stresses the importance of historicity #2 in the process of historical production. Grounding our understanding and beliefs about the past solely in historicity #1 overlooks the crucial role society and culture play in shaping it.</p>
-    <p>Hitchcock resolves the tension between factuality and narrative in history by claiming that history is a genre constructed by society and its needs and as such its nature and goals are subject to constant change. The current technological development and culture make big data a useful tool in understanding the past. And yet, reflecting on his in-depth data study of the life of Sarah Durrant, Hitchcock concludes with:</p>
-    <p style="margin-inline: 4vmin"><em>I will read anew, and use all the tools of big data, of ngrams and power laws; and I will publish the results with graphs, tables and GIS; but I refuse to forget that my object of study, my objective, is an emotional, imaginative and empathetic engagement with Sarah Durrant, and all the people like her.</em></p>
-    <p></p>
 
+    <p>The map above is clearly incomplete. The limited information results in very few arrows across big distances, more representative of modern-day flights rather than the long routes along roads, rivers and seaways across 19th century Europe and North America. It is possible to fill in some of the location gaps with information from other resources like censuses from different years, immigration ships passenger records, other archives, etc. Personal diaries, memoirs, family histories and others can make the narratives more human. Multilayered, interlinked data would allow us to situate immigrants' backgrounds and experiences.</p>
+      
     <div class="panel" data-color="white" style="min-height: 30vh;"></div>
     <div class="panel centered" data-color="black">
       <h class="display-1 light-text">Continue exploring</h>
