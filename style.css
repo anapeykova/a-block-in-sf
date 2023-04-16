@@ -22,7 +22,7 @@ body::-webkit-scrollbar {
 }
 
 h1 {
-  font-weight: 50; */
+  font-weight: 50;
   color: #222;
   padding-top: 10%;
   text-align: center;
@@ -60,7 +60,7 @@ h3 {
 
 .panel {
   min-height: 100vh;
-  /* outline: 10px solid hotpink; */
+  /* outline: 3px solid hotpink; */
 }
 
 .centered {
@@ -184,4 +184,52 @@ a:hover {
     rgba(200, 200, 200, 0.2) 95%,
     rgba(149, 149, 149, 0.1)
   );
+}
+
+.map {
+  margin-bottom: 5vmin;
+}
+
+
+#content-wrapper{
+	display: flex;
+  margin-top: 5vmin;
+}
+
+#img-container{
+  display: flex;
+	z-index: 1;
+	position: relative;
+}
+
+#lens{
+	z-index: 2;
+	position: absolute;
+	height: 125px;
+	width: 125px;
+	border:2px solid black;
+	background-repeat: no-repeat;
+	cursor: none;
+}
+
+#featured{
+	cursor: pointer;
+
+}
+
+.thumbnail{
+	object-fit: cover;
+	cursor: pointer;
+	opacity: 0.5;
+	margin: 5px;
+	border: 2px solid black;
+
+}
+
+.thumbnail:hover{
+	opacity:1;
+}
+
+.active{
+	opacity: 1;
 }
