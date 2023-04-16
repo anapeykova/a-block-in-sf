@@ -24,12 +24,20 @@ body::-webkit-scrollbar {
 h1 {
   font-weight: 50;
   color: #222;
-  padding-top: 10%;
+  padding-top: 5vh;
   text-align: center;
   position: relative; 
   z-index: 2; 
 }
 
+h4 {
+  font-weight: 50;
+  font-size: 3vmin;
+  color: #222;
+  text-align: center;
+  position: relative; 
+  z-index: 2; 
+}
 
 .credit {
   position: absolute;
